@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting to MIDAS Attendance</title>
+    <title>MIDAS Attendance - Today</title>
     
-    <!-- Meta refresh redirect -->
-    <meta http-equiv="refresh" content="1; url=https://script.google.com/macros/s/AKfycbziPmXIpc_f9OwBDCU4QExUGP7gHP0lcyTPNcJ-ccWTC7P4mpL2408VSoiaag0Mn1lJyg/exec">
+    <!-- Meta refresh redirect - UPDATE THIS URL -->
+    <meta http-equiv="refresh" content="1; url=https://script.google.com/macros/s/AKfycbytCkJj1G_yCFxhzENIpc_IMCbq7rBskzaljE5ugKd1o7pliaJU2_A2Hk9Pc0hLLgl-eg/exec">
     
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            background: linear-gradient(135deg, #06b6d4, #3b82f6);
             color: white;
             margin: 0;
             padding: 0;
@@ -45,6 +45,16 @@
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
+        }
+        
+        .date-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            font-weight: 600;
         }
         
         h1 {
@@ -87,23 +97,30 @@
 <body>
     <div class="container">
         <div class="spinner"></div>
+        <div class="date-badge" id="todayDate">TODAY</div>
         <h1>MIDAS Attendance</h1>
-        <p>Redirecting to attendance system...</p>
+        <p>Redirecting to today's attendance...</p>
         <p>Please wait a moment.</p>
         
-        <a href="https://script.google.com/macros/s/AKfycbziPmXIpc_f9OwBDCU4QExUGP7gHP0lcyTPNcJ-ccWTC7P4mpL2408VSoiaag0Mn1lJyg/exec" class="link">
+        <!-- UPDATE THIS URL -->
+        <a href="https://script.google.com/macros/s/AKfycbytCkJj1G_yCFxhzENIpc_IMCbq7rBskzaljE5ugKd1o7pliaJU2_A2Hk9Pc0hLLgl-eg/exec" class="link">
             Click here if not redirected →
         </a>
         
         <div class="footer">
-            Powered by GitHub Pages
+            Today's Attendance System
         </div>
     </div>
 
     <script>
-        // JavaScript redirect
+        // Display today's date
+        const today = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('todayDate').textContent = today.toLocaleDateString('en-US', options);
+        
+        // JavaScript redirect - UPDATE THIS URL
         setTimeout(function() {
-            window.location.replace("https://script.google.com/macros/s/AKfycbziPmXIpc_f9OwBDCU4QExUGP7gHP0lcyTPNcJ-ccWTC7P4mpL2408VSoiaag0Mn1lJyg/exec");
+            window.location.replace("https://script.google.com/macros/s/AKfycbytCkJj1G_yCFxhzENIpc_IMCbq7rBskzaljE5ugKd1o7pliaJU2_A2Hk9Pc0hLLgl-eg/exec");
         }, 1000);
     </script>
 </body>
