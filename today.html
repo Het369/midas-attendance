@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to MIDAS Attendance</title>
+    
+    <!-- Meta refresh redirect -->
+    <meta http-equiv="refresh" content="1; url=https://script.google.com/macros/s/AKfycbziPmXIpc_f9OwBDCU4QExUGP7gHP0lcyTPNcJ-ccWTC7P4mpL2408VSoiaag0Mn1lJyg/exec">
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 400px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 2rem;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        h1 {
+            margin: 0 0 1rem 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        p {
+            margin: 0.5rem 0;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        
+        .link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+        
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="spinner"></div>
+        <h1>MIDAS Attendance</h1>
+        <p>Redirecting to attendance system...</p>
+        <p>Please wait a moment.</p>
+        
+        <a href="https://script.google.com/macros/s/AKfycbziPmXIpc_f9OwBDCU4QExUGP7gHP0lcyTPNcJ-ccWTC7P4mpL2408VSoiaag0Mn1lJyg/exec" class="link">
+            Click here if not redirected →
+        </a>
+        
+        <div class="footer">
+            Powered by GitHub Pages
+        </div>
+    </div>
+
+    <script>
+        // JavaScript redirect
+        setTimeout(function() {
+            window.location.replace("https://script.google.com/macros/s/AKfycbziPmXIpc_f9OwBDCU4QExUGP7gHP0lcyTPNcJ-ccWTC7P4mpL2408VSoiaag0Mn1lJyg/exec");
+        }, 1000);
+    </script>
+</body>
+</html>
